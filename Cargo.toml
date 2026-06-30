@@ -1,0 +1,12 @@
+[package]
+name = "earth"
+version = "0.3.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "0.5"
+base64 = "0.22"
+mdns-sd = "0.11"
+rand = "0.8"
+rpassword = "7.3"
+sha2 = "0.10"
