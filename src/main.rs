@@ -923,7 +923,7 @@ fn auth_line() -> io::Result<String> {
 
 fn verify_auth_line(line: &str) -> io::Result<()> {
     let cfg = load_config()?;
-    let cols: Vec<_> = line.split('	').collect();
+    let cols: Vec<_> = line.split('\t').collect();
     if cols.len() < 4 || cols[0] != "AUTH" { return Err(err("missing AUTH header")); }
     let remote_user = unesc(cols[1]);
     let remote_account = unesc(cols[2]);
